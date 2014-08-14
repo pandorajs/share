@@ -1,0 +1,53 @@
+{
+  "name": "share",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [ "share", "pandora", "widget", "seajs" ],
+  "homepage": "https://github.com/pandorajs/share",
+  "bugs": {
+    "url": "https://github.com/pandorajs/share/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/pandorajs/share/blob/master/LICENSE-MIT"
+    }
+  ],
+  "author": {
+    "name": "pandorajs",
+    "url": "https://github.com/pandorajs"
+  },
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/pandorajs/share.git"
+  },
+  "scripts": {
+    "test": "grunt qunit"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-cmd-transport": "*",
+    "grunt-cmd-concat": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-yuidoc": "*",
+    "grunt-coveralls": "*",
+    "grunt-qunit-istanbul": "*",
+    "matchdep": "*"
+  },
+  "family": "pandora",
+  "spm": {
+    "output": [ "share.js" ],
+    "alias": {
+      "widget": "pandora/widget/1.0.0/widget"
+    }
+  }
+}
