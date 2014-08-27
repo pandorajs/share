@@ -70,7 +70,7 @@ define(function(require, exports, module) {
              * @type {String}
              */
             shTitle: function() {
-                return document.title;
+                return this._match().title || document.title;
             },
 
             /**
@@ -78,7 +78,7 @@ define(function(require, exports, module) {
              * @return {String} [description]
              */
             shUrl: function() {
-                return window.location.href;
+                return this._match().url || window.location.href;
             },
 
             /**
@@ -115,9 +115,9 @@ define(function(require, exports, module) {
 
             /**
              * 要显示的分享类型，以及排列顺序。
-             * @type {Array}
+             * @type {String}
              */
-            shareList: ['qzone', 'tsina', 'tqq', 'tsohu', 'renren', 'weixin'],
+            shareList: 'qzone,tsina,tqq,tsohu,renren,weixin',
 
             /**
              * 预留获取总分享次数接口
@@ -203,7 +203,7 @@ define(function(require, exports, module) {
             var self = this;
             var shareItem;
             var shareMap = $.extend(true, self.option('customShare'), dictionary);
-            var shareList = self.option('shareList');
+            var shareList = self.option('shareList').split(/\s*,\s*/);
             var viewData = {
                 showLabel: self.option('showLabel'),
                 sharelist: []
@@ -310,6 +310,25 @@ define(function(require, exports, module) {
                 sourceUrl: self.option('sourceUrl'),
                 source: self.option('source')
             };
+        },
+
+        _match: function() {
+            var self = this;
+            var info = {};
+            var match = self.option('match');
+            var relativeDom = self.relateDom || self.element;
+            var targetDom;
+            var matchArray;
+
+            if (match) {
+                matchArray = match.split(/\s+/);
+                targetDom = relativeDom.parents(matchArray.shift()).eq(0).find(matchArray.join(' ')).eq(0);
+                info = {
+                    url: targetDom.attr('href'),
+                    title: targetDom.attr('title') || targetDom.text()
+                };
+            }
+            return info;
         },
 
         _createAttr: function(attr) {

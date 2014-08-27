@@ -35,6 +35,8 @@ define(function(require, exports, module) {
         //QQ空间
         'qzone': {
             label: 'QQ空间',
+            height: 500,
+            width: 700,
             target: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{url}}&site={{source}}&title={{title}}&summary={{summary}}&desc={{summary}}'
         },
 
