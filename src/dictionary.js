@@ -35,7 +35,7 @@ define(function(require, exports, module) {
         //QQ空间
         'qzone': {
             label: 'QQ空间',
-            target: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{url}}&site={{source}}&pics={{img}}&title={{title}}&desc={{summary}}'
+            target: 'http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{url}}&site={{source}}&title={{title}}&summary={{summary}}&desc={{summary}}'
         },
 
         //腾讯微博
@@ -48,7 +48,7 @@ define(function(require, exports, module) {
         //人人网
         'renren': {
             label: '人人网',
-            target: 'http://share.renren.com/share/buttonshare?link={{url}}&title={{title}}'
+            target: 'http://widget.renren.com/dialog/share?resourceUrl={{url}}&srcUrl={{source}}&title={{title}}&description={{summary}}'
         },
 
         //微信
