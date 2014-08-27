@@ -47,7 +47,9 @@
   "spm": {
     "output": [ "share.js" ],
     "alias": {
-      "widget": "pandora/widget/1.0.0/widget"
+      "$": "$",
+      "widget": "pandora/widget/1.0.0/widget",
+      "overlay" : "pandora/overlay/1.0.0/overlay"
     }
   }
 }

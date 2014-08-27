@@ -9,7 +9,6 @@ define(function(require, exports, module) {
     'use strict';
 
     var $ = require('$'),
-        handlebars = require('handlebars'),
         Overlay = require('overlay'),
         dictionary = require('./dictionary');
 

@@ -116,11 +116,11 @@ module.exports = function(grunt) {
         idleading: '<%= idleading %>',
         alias: '<%= pkg.spm.alias %>'
       },
-      dist: {
+      all: {
         files: [{
           expand: true,
           cwd: 'src/',
-          src: ['*.js'],
+          src: ['*.js', '*.handlebars', '*.css'],
           dest: '.build/'
         }]
       }
