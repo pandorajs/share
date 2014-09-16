@@ -1,0 +1,21 @@
+.gb-share-drop-simple .gb-share-btn,.gb-share-drop-simple .gb-share-btn:visited{ color:#bebebe;}
+
+.gb-share-drop-simple{ *display:inline; position: relative; padding:0 3px; border:1px solid #ececec; background-color: #fff;}
+.gb-share-drop-simple .gb-share-con{ margin-bottom: -1px\9;}
+.gb-share-drop-simple .gb-share-ico-preset,.gb-share-drop-simple .gb-share-ico-preset1{ overflow: hidden; position: absolute; left:50%; width: 0; height: 0; margin-left:-5px; border-top:5px dashed transparent; border-right:5px dashed transparent; border-left:5px dashed transparent;}
+.gb-share-drop-simple .gb-share-ico-preset{ top: -11px; border-bottom:5px solid #ececec;}
+.gb-share-drop-simple .gb-share-ico-preset1{ top: -10px; border-bottom:5px solid #fff;}
+.gb-share-drop-simple .gb-share-title,.gb-share-drop-simple .gb-share-btn-tit{ display: none;}
+.gb-share-drop-simple .gb-share-btn{ float:none; display:block; padding:3px; border-bottom:1px solid #efefef;}
+.gb-share-drop-simple .gb-share-btn:last-child{ border-bottom:0;}
+.gb-share-drop-simple .gb-share-ico-font{ float: none; display: block;}
+
+.gb-share-drop-simple .gb-share-btn-tsohu:hover{ color: #fab617;}
+.gb-share-drop-simple .gb-share-btn-qzone:hover{ color: #f79532;}
+.gb-share-drop-simple .gb-share-btn-tsina:hover{ color: #f2543f;}
+.gb-share-drop-simple .gb-share-btn-tqq:hover{ color: #73c5f1;}
+.gb-share-drop-simple .gb-share-btn-kaixin:hover{ color: #eb4953;}
+.gb-share-drop-simple .gb-share-btn-renren:hover{ color: #5f8dea;}
+.gb-share-drop-simple .gb-share-btn-t163:hover{ color: #df0037;}
+.gb-share-drop-simple .gb-share-btn-weixin:hover{ color: #91d460;}
+.gb-share-drop-simple .gb-share-btn-qq:hover{ color: #49bbf2;}

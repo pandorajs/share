@@ -1,7 +1,14 @@
-{{#each sharelist}}
-	<a href="javascript:;" title="分享到{{label}}" class="{{shareType}}" data-role="{{shareType}}" >
-		{{#if ../showLabel}}
-			{{label}}
-		{{/if}}
-	</a>
-{{/each}}
+<div class="gb-share" data-role="main">
+	<div class="gb-share-title">分享到：</div>
+  <div class="gb-share-con">
+  	{{#each sharelist}}
+  		<a class="gb-share-btn gb-share-btn-{{shareType}}" href="#share" data-site="{{shareType}}" title="分享到{{label}}">
+  			<i class="gb-share-ico-font">{{iconText}}</i>
+  			{{#if ../showLabel}}
+  				<span class="gb-share-btn-tit">{{label}}</span>
+  			{{/if}}
+  		</a>
+  	{{/each}}
+  </div>
+  <b class="gb-share-ico-preset"></b><b class="gb-share-ico-preset1"></b>
+</div>

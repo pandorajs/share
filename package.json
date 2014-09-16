@@ -32,7 +32,7 @@
   },
   "devDependencies": {
     "grunt": "*",
-    "grunt-cmd-transport": "*",
+    "grunt-cmd-transport": "crossjs/grunt-cmd-transport",
     "grunt-cmd-concat": "*",
     "grunt-contrib-clean": "*",
     "grunt-contrib-copy": "*",
@@ -45,9 +45,11 @@
   },
   "family": "pandora",
   "spm": {
-    "output": [ "share.js" ],
+    "output": [ "share.js","floatshare.js"],
     "alias": {
       "$": "$",
+      "handlebars": "gallery/handlebars/1.3.0/handlebars-runtime",
+      "importstyle": "pandora/importstyle/1.0.0/importstyle",
       "widget": "pandora/widget/1.0.0/widget",
       "overlay" : "pandora/overlay/1.0.0/overlay"
     }

@@ -1,0 +1,14 @@
+.gb-share-simple .gb-share-btn,.gb-share-simple .gb-share-btn:visited{ color:#bebebe;}
+.gb-share-simple .gb-share-con{ margin-left:-5px;}
+.gb-share-simple .gb-share-btn-tit{ display: none;}
+
+.gb-share-simple .gb-share-btn{ margin-left: 5px;}
+.gb-share-simple .gb-share-btn-tsohu:hover{ color: #fab617;}
+.gb-share-simple .gb-share-btn-qzone:hover{ color: #f79532;}
+.gb-share-simple .gb-share-btn-tsina:hover{ color: #f2543f;}
+.gb-share-simple .gb-share-btn-tqq:hover{ color: #73c5f1;}
+.gb-share-simple .gb-share-btn-kaixin:hover{ color: #eb4953;}
+.gb-share-simple .gb-share-btn-renren:hover{ color: #5f8dea;}
+.gb-share-simple .gb-share-btn-t163:hover{ color: #df0037;}
+.gb-share-simple .gb-share-btn-weixin:hover{ color: #91d460;}
+.gb-share-simple .gb-share-btn-qq:hover{ color: #49bbf2;}

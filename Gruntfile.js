@@ -88,10 +88,24 @@ module.exports = function(grunt) {
         files: {
           src: ['<%= sea %>**']
         }
+      },
+      css : {
+        files: {
+          src: ['src/*.css']
+        }
       }
     },
 
     copy: {
+      css: {
+        files: [{
+          expand: true,
+          cwd: 'assets/css/',
+          src: ['**'],
+          dest: 'src/'
+        }]
+      },
+
       doc: {
         files: [{
           expand: true,
@@ -135,7 +149,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '.build/',
-          src: ['share*.js'],
+          src: ['*.js'],
           dest: 'dist/'
         }]
       }
@@ -167,7 +181,7 @@ module.exports = function(grunt) {
 
   });
 
-  grunt.registerTask('build', ['clean:dist', 'transport', 'concat', 'clean:build', 'uglify']);
+  grunt.registerTask('build', ['clean:dist', 'copy:css', 'transport', 'concat', 'clean:build', 'clean:css', 'uglify']);
 
   grunt.registerTask('demo', ['clean:sea', 'copy:sea']);
 

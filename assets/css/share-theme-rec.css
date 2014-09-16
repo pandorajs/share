@@ -1,0 +1,60 @@
+.gb-share-rec .gb-share-btn,.gb-share-rec .gb-share-btn:visited,.gb-share-rec .gb-share-btn:hover{ color:#fff;}
+.gb-share-rec .gb-share-btn{ margin:0 3px; background: url(http://ue2.17173cdn.com/a/lib/pandora/share/1.0.0/assets/img/gb-share-ico.png) no-repeat;}
+.gb-share-rec .gb-share-btn-tit{ display: none;}
+
+.gb-share-s-rec .gb-share-btn-tsohu{ background-position: -385px -31px}
+.gb-share-s-rec .gb-share-btn-tsohu:hover{ background-position: -523px -31px}
+.gb-share-s-rec .gb-share-btn-qzone{ background-position: -109px -31px}
+.gb-share-s-rec .gb-share-btn-qzone:hover{ background-position: -247px -31px}
+.gb-share-s-rec .gb-share-btn-tsina{ background-position: -109px -92px}
+.gb-share-s-rec .gb-share-btn-tsina:hover{ background-position: -247px -92px}
+.gb-share-s-rec .gb-share-btn-tqq{ background-position: -109px -214px}
+.gb-share-s-rec .gb-share-btn-tqq:hover{ background-position: -247px -214px}
+.gb-share-s-rec .gb-share-btn-kaixin{ background-position: -385px -92px}
+.gb-share-s-rec .gb-share-btn-kaixin:hover{ background-position: -523px -92px}
+.gb-share-s-rec .gb-share-btn-renren{ background-position: -385px -214px}
+.gb-share-s-rec .gb-share-btn-renren:hover{ background-position: -523px -214px}
+.gb-share-s-rec .gb-share-btn-t163{ background-position: -109px -153px}
+.gb-share-s-rec .gb-share-btn-t163:hover{ background-position: -247px -153px}
+.gb-share-s-rec .gb-share-btn-weixin{ background-position: -385px -153px}
+.gb-share-s-rec .gb-share-btn-weixin:hover{ background-position: -523px -153px}
+.gb-share-s-rec .gb-share-btn-qq{ background-position: -109px -275px}
+.gb-share-s-rec .gb-share-btn-qq:hover{ background-position: -247px -275px}
+
+.gb-share-m-rec .gb-share-btn-tsohu{ background-position: -364px -31px}
+.gb-share-m-rec .gb-share-btn-tsohu:hover{ background-position: -502px -31px}
+.gb-share-m-rec .gb-share-btn-qzone{ background-position: -88px -31px}
+.gb-share-m-rec .gb-share-btn-qzone:hover{ background-position: -226px -31px}
+.gb-share-m-rec .gb-share-btn-tsina{ background-position: -88px -92px}
+.gb-share-m-rec .gb-share-btn-tsina:hover{ background-position: -226px -92px}
+.gb-share-m-rec .gb-share-btn-tqq{ background-position: -88px -214px}
+.gb-share-m-rec .gb-share-btn-tqq:hover{ background-position: -226px -214px}
+.gb-share-m-rec .gb-share-btn-kaixin{ background-position: -364px -92px}
+.gb-share-m-rec .gb-share-btn-kaixin:hover{ background-position: -502px -92px}
+.gb-share-m-rec .gb-share-btn-renren{ background-position: -364px -214px}
+.gb-share-m-rec .gb-share-btn-renren:hover{ background-position: -502px -214px}
+.gb-share-m-rec .gb-share-btn-t163{ background-position: -88px -153px}
+.gb-share-m-rec .gb-share-btn-t163:hover{ background-position: -226px -153px}
+.gb-share-m-rec .gb-share-btn-weixin{ background-position: -364px -153px}
+.gb-share-m-rec .gb-share-btn-weixin:hover{ background-position: -502px -153px}
+.gb-share-m-rec .gb-share-btn-qq{ background-position: -88px -275px}
+.gb-share-m-rec .gb-share-btn-qq:hover{ background-position: -226px -275px}
+
+.gb-share-l-rec .gb-share-btn-tsohu{ background-position: -337px -31px}
+.gb-share-l-rec .gb-share-btn-tsohu:hover{ background-position: -475px -31px}
+.gb-share-l-rec .gb-share-btn-qzone{ background-position: -61px -31px}
+.gb-share-l-rec .gb-share-btn-qzone:hover{ background-position: -199px -31px}
+.gb-share-l-rec .gb-share-btn-tsina{ background-position: -61px -92px}
+.gb-share-l-rec .gb-share-btn-tsina:hover{ background-position: -199px -92px}
+.gb-share-l-rec .gb-share-btn-tqq{ background-position: -61px -214px}
+.gb-share-l-rec .gb-share-btn-tqq:hover{ background-position: -199px -214px}
+.gb-share-l-rec .gb-share-btn-kaixin{ background-position: -337px -92px}
+.gb-share-l-rec .gb-share-btn-kaixin:hover{ background-position: -475px -92px}
+.gb-share-l-rec .gb-share-btn-renren{ background-position: -337px -214px}
+.gb-share-l-rec .gb-share-btn-renren:hover{ background-position: -475px -214px}
+.gb-share-l-rec .gb-share-btn-t163{ background-position: -61px -153px}
+.gb-share-l-rec .gb-share-btn-t163:hover{ background-position: -199px -153px}
+.gb-share-l-rec .gb-share-btn-weixin{ background-position: -337px -153px}
+.gb-share-l-rec .gb-share-btn-weixin:hover{ background-position: -475px -153px}
+.gb-share-l-rec .gb-share-btn-qq{ background-position: -61px -275px}
+.gb-share-l-rec .gb-share-btn-qq:hover{ background-position: -199px -275px}

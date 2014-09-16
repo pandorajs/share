@@ -1,0 +1,33 @@
+@font-face{ font-family: 'gb-share-ico-font'; src:url("http://ue.17173cdn.com/a/lib/pandora/share/1.0.0/assets/font/gb-share-ico-font.eot"); src:url("http://ue.17173cdn.com/a/lib/pandora/share/1.0.0/assets/font/gb-share-ico-font.eot?#iefix") format("embedded-opentype"),url(data:application/font-woff;base64,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) format("woff"),url("http://ue.17173cdn.com/a/lib/pandora/share/1.0.0/assets/font/gb-share-ico-font.ttf") format("truetype"),url("http://ue.17173cdn.com/a/lib/pandora/share/1.0.0/assets/font/gb-share-ico-font.svg#gb-share-ico-font") format("svg");}
+
+.gb-share{ *zoom:1;}
+.gb-share:before,.gb-share:after{ content: ' '; display: table; clear: both;}
+.gb-share .gb-share-title{ float: left; font-size: 14px;}
+.gb-share .gb-share-con{ float: left;}
+.gb-share .gb-share-btn{ float: left; text-decoration: none;}
+.gb-share .gb-share-btn:hover{ text-decoration: none;}
+.gb-share .gb-share-ico-font{ overflow: hidden; float: left; box-sizing:border-box; padding-top:1px; *padding-top:0; font-family: 'gb-share-ico-font'; font-weight: normal!important; font-style: normal!important; text-align: center!important; speak: none; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; cursor: pointer; filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="http://ue1.17173cdn.com/a/lib/pandora/share/1.0.0/assets/img/gb-share-iefix.png",sizingMethod=crop); _filter:none;}
+
+@-moz-document url-prefix(){
+	.gb-share .gb-share-ico-font{ padding-top:2px;}
+}
+
+.gb-share-s .gb-share-title,.gb-share-s .gb-share-btn{ line-height: 16px;}
+.gb-share-s .gb-share-ico-font{ width: 16px; height: 16px; font-size: 14px;}
+
+.gb-share-m .gb-share-title,.gb-share-m .gb-share-btn{ line-height: 20px;}
+.gb-share-m .gb-share-ico-font{ width: 20px; height: 20px; font-size: 18px;}
+
+.gb-share-l .gb-share-title,.gb-share-l .gb-share-btn{ line-height: 26px;}
+.gb-share-l .gb-share-ico-font{ width: 26px; height: 26px; font-size: 24px;}
+
+.gb-share-xl .gb-share-title,.gb-share-xl .gb-share-btn{ line-height: 56px;}
+.gb-share-xl .gb-share-ico-font{ width: 56px; height: 56px; font-size: 46px;}
+
+.gb-share-tip{ position: absolute; z-index: 610; width: 160px;}
+.gb-share-tip-in{ border:1px solid #ececec; background-color:#fff;}
+.gb-share-tip-hd{ overflow: hidden; *zoom:1;}
+.gb-share-tip .gb-share-btn-close{ float: right; width: 25px; height: 25px; font: bold 14px/25px "SimSun"; text-align: center;}
+.gb-share-tip .gb-share-btn-close,.gb-share-tip .gb-share-btn-close:visited,.gb-share-tip .gb-share-btn-close:hover{ color: #aaa; text-decoration: none;}
+.gb-share-tip-bd{ padding:0 19px 15px; font:normal 12px/1.5 "MicroSoft YaHei"; color: #999; text-align: center;}
+.gb-share-tip-bd img{ display: block; max-width: 100%; _width:100%; margin:0 auto; border:0;}

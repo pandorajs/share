@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>这是标题</title>
+    <script src="http://ue.17173cdn.com/a/lib/pandora.js"></script>
+</head>
+
+<body>
+
+
+<div id="box1"></div>
+
+<div id="box2"></div>
+
+<div id="box3"></div>
+
+<div >多么痛的领悟多么痛的领悟多么痛的领悟<span id="floatbox1" style="color:red">点这</span>多么痛的领悟多么痛的领悟</div>
+<div >多么痛的领悟多么痛的领悟多么痛的领悟<span id="floatbox2" style="color:red">点这</span>多么痛的领悟多么痛的领悟</div>
+
+
+<ul id="list">
+  <li><a title="《网易全明星》8.12首测 CG 首批英雄抢先看" href="http://news.17173.com/content/2014-07-30/20140730150001098.shtml">a1</a>  <span>点击1</span></li>
+  <li><a title="老少皆宜现场欢乐！《风暴英雄》CJ现场试玩" href="http://news.17173.com/content/2014-07-31/20140731173419614_1.shtml">a1</a>  <span>点击2</span></li>
+</ul>
+
+
+<p>xxxxxxxxxxxxxxx<span data-widget="share"  data-widget-share-list="weixin,tsohu,renren,qq" >tttttt</span>xxxxxxxxxxxxxxxxxxxx</p>
+
+    <script>
+    pandora.use(['$', 'share', 'pandora/share/1.0.0/floatshare'], function($, Share, FloatShare) {
+
+        new Share({
+          element : '#box1',
+          styleType : '2',
+
+          shape : 'cir'
+
+        });
+
+        new Share({
+          element : '#box2',
+          styleType : '1',
+
+          shape : 'cir',
+          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+
+        new Share({
+          element : '#box3',
+          styleType : '2',
+
+          shape : 'rec',
+          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+
+
+         new FloatShare({
+          element : '#floatbox1',
+
+          styleType:'2',
+          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+
+         new FloatShare({
+          element : '#floatbox2',
+
+          styleType:'1',
+          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+
+
+         new FloatShare({
+          element : '#list',
+          selector : 'span',
+          match : 'li a',
+          styleType:'1',
+          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+
+
+    });
+    </script>
+</body>
+
+</html>

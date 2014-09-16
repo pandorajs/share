@@ -1,0 +1,7 @@
+.gb-share-drop .gb-share-btn,.gb-share-drop .gb-share-btn:visited,.gb-share-drop .gb-share-btn:hover{ color:#666;}
+
+.gb-share-drop{ *display:inline; border:1px solid #ececec; background-color: #fff;}
+.gb-share-drop .gb-share-title{ display: none;}
+.gb-share-drop .gb-share-btn{ float: none; display: block; padding:.3em 1em .3em 10px; font-family: "MicroSoft YaHei"; font-size: 14px;}
+.gb-share-drop .gb-share-btn:hover{ background-color: #f5f5f5}
+.gb-share-drop .gb-share-ico-font{ margin-right:10px; color: #7c7c7c;}

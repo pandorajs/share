@@ -1,0 +1,80 @@
+.gb-share-cir .gb-share-title{ padding-top:2px;}
+.gb-share-cir .gb-share-btn,.gb-share-cir .gb-share-btn:visited,.gb-share-cir .gb-share-btn:hover{ color:#fff;}
+.gb-share-cir .gb-share-btn{ margin:0 3px; padding:2px; background: url(http://ue2.17173cdn.com/a/lib/pandora/share/1.0.0/assets/img/gb-share-ico.png) no-repeat;}
+.gb-share-cir .gb-share-btn-tit{ display: none;}
+
+.gb-share-s-cir .gb-share-btn-tsohu{ background-position: -393px 0}
+.gb-share-s-cir .gb-share-btn-tsohu:hover{ background-position: -531px 0}
+.gb-share-s-cir .gb-share-btn-qzone{ background-position: -117px 0}
+.gb-share-s-cir .gb-share-btn-qzone:hover{ background-position: -255px 0}
+.gb-share-s-cir .gb-share-btn-tsina{ background-position: -117px -61px}
+.gb-share-s-cir .gb-share-btn-tsina:hover{ background-position: -255px -61px}
+.gb-share-s-cir .gb-share-btn-tqq{ background-position: -117px -183px}
+.gb-share-s-cir .gb-share-btn-tqq:hover{ background-position: -255px -183px}
+.gb-share-s-cir .gb-share-btn-kaixin{ background-position: -393px -61px}
+.gb-share-s-cir .gb-share-btn-kaixin:hover{ background-position: -531px -61px}
+.gb-share-s-cir .gb-share-btn-renren{ background-position: -393px -183px}
+.gb-share-s-cir .gb-share-btn-renren:hover{ background-position: -531px -183px}
+.gb-share-s-cir .gb-share-btn-t163{ background-position: -117px -122px}
+.gb-share-s-cir .gb-share-btn-t163:hover{ background-position: -255px -122px}
+.gb-share-s-cir .gb-share-btn-weixin{ background-position: -393px -122px}
+.gb-share-s-cir .gb-share-btn-weixin:hover{ background-position: -531px -122px}
+.gb-share-s-cir .gb-share-btn-qq{ background-position: -117px -244px}
+.gb-share-s-cir .gb-share-btn-qq:hover{ background-position: -255px -244px}
+
+.gb-share-m-cir .gb-share-btn-tsohu{ background-position: -368px 0}
+.gb-share-m-cir .gb-share-btn-tsohu:hover{ background-position: -506px 0}
+.gb-share-m-cir .gb-share-btn-qzone{ background-position: -92px 0}
+.gb-share-m-cir .gb-share-btn-qzone:hover{ background-position: -230px 0}
+.gb-share-m-cir .gb-share-btn-tsina{ background-position: -92px -61px}
+.gb-share-m-cir .gb-share-btn-tsina:hover{ background-position: -230px -61px}
+.gb-share-m-cir .gb-share-btn-tqq{ background-position: -92px -183px}
+.gb-share-m-cir .gb-share-btn-tqq:hover{ background-position: -230px -183px}
+.gb-share-m-cir .gb-share-btn-kaixin{ background-position: -368px -61px}
+.gb-share-m-cir .gb-share-btn-kaixin:hover{ background-position: -506px -61px}
+.gb-share-m-cir .gb-share-btn-renren{ background-position: -368px -183px}
+.gb-share-m-cir .gb-share-btn-renren:hover{ background-position: -506px -183px}
+.gb-share-m-cir .gb-share-btn-t163{ background-position: -92px -122px}
+.gb-share-m-cir .gb-share-btn-t163:hover{ background-position: -230px -122px}
+.gb-share-m-cir .gb-share-btn-weixin{ background-position: -368px -122px}
+.gb-share-m-cir .gb-share-btn-weixin:hover{ background-position: -506px -122px}
+.gb-share-m-cir .gb-share-btn-qq{ background-position: -92px -244px}
+.gb-share-m-cir .gb-share-btn-qq:hover{ background-position: -230px -244px}
+
+.gb-share-l-cir .gb-share-btn-tsohu{ background-position: -337px 0}
+.gb-share-l-cir .gb-share-btn-tsohu:hover{ background-position: -475px 0}
+.gb-share-l-cir .gb-share-btn-qzone{ background-position: -61px 0}
+.gb-share-l-cir .gb-share-btn-qzone:hover{ background-position: -199px 0}
+.gb-share-l-cir .gb-share-btn-tsina{ background-position: -61px -61px}
+.gb-share-l-cir .gb-share-btn-tsina:hover{ background-position: -199px -61px}
+.gb-share-l-cir .gb-share-btn-tqq{ background-position: -61px -183px}
+.gb-share-l-cir .gb-share-btn-tqq:hover{ background-position: -199px -183px}
+.gb-share-l-cir .gb-share-btn-kaixin{ background-position: -337px -61px}
+.gb-share-l-cir .gb-share-btn-kaixin:hover{ background-position: -475px -61px}
+.gb-share-l-cir .gb-share-btn-renren{ background-position: -337px -183px}
+.gb-share-l-cir .gb-share-btn-renren:hover{ background-position: -475px -183px}
+.gb-share-l-cir .gb-share-btn-t163{ background-position: -61px -122px}
+.gb-share-l-cir .gb-share-btn-t163:hover{ background-position: -199px -122px}
+.gb-share-l-cir .gb-share-btn-weixin{ background-position: -337px -122px}
+.gb-share-l-cir .gb-share-btn-weixin:hover{ background-position: -475px -122px}
+.gb-share-l-cir .gb-share-btn-qq{ background-position: -61px -244px}
+.gb-share-l-cir .gb-share-btn-qq:hover{ background-position: -199px -244px}
+
+.gb-share-xl-cir .gb-share-btn-tsohu{ background-position: -276px 0}
+.gb-share-xl-cir .gb-share-btn-tsohu:hover{ background-position: -414px 0}
+.gb-share-xl-cir .gb-share-btn-qzone{ background-position: 0 0}
+.gb-share-xl-cir .gb-share-btn-qzone:hover{ background-position: -138px 0}
+.gb-share-xl-cir .gb-share-btn-tsina{ background-position: 0 -61px}
+.gb-share-xl-cir .gb-share-btn-tsina:hover{ background-position: -138px -61px}
+.gb-share-xl-cir .gb-share-btn-tqq{ background-position: 0 -183px}
+.gb-share-xl-cir .gb-share-btn-tqq:hover{ background-position: -138px -183px}
+.gb-share-xl-cir .gb-share-btn-kaixin{ background-position: -276px -61px}
+.gb-share-xl-cir .gb-share-btn-kaixin:hover{ background-position: -414px -61px}
+.gb-share-xl-cir .gb-share-btn-renren{ background-position: -276px -183px}
+.gb-share-xl-cir .gb-share-btn-renren:hover{ background-position: -414px -183px}
+.gb-share-xl-cir .gb-share-btn-t163{ background-position: 0 -122px}
+.gb-share-xl-cir .gb-share-btn-t163:hover{ background-position: -138px -122px}
+.gb-share-xl-cir .gb-share-btn-weixin{ background-position: -276px -122px}
+.gb-share-xl-cir .gb-share-btn-weixin:hover{ background-position: -414px -122px}
+.gb-share-xl-cir .gb-share-btn-qq{ background-position: 0 -244px}
+.gb-share-xl-cir .gb-share-btn-qq:hover{ background-position: -138px -244px}
