@@ -63,13 +63,14 @@ define(function(require, exports, module) {
         'renren': {
             iconText: 'r',
             label: '人人网',
-            target: 'http://widget.renren.com/dialog/share?resourceUrl={{url}}&srcUrl={{source}}&title={{title}}&description={{summary}}&pic={{img}}'
+            target: 'http://widget.renren.com/dialog/share?resourceUrl={{url}}&srcUrl={{source}}&title={{title}}&description={{summary}}&images={{img}}'
         },
 
         //网易
         't163': {
             iconText: 'w',
             label: '网易微博',
+            imgSplit : ',',
             target: 'http://t.163.com/article/user/checkLogin.do?sourceUrl={{sourceUrl}}&source={{source}}&info={{title}}  {{url}}&link={{url}}&images={{img}}&togImg=true'
         },
 

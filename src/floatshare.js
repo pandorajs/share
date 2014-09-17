@@ -26,24 +26,32 @@ define(function(require, exports, module) {
 
             /**
              * 关联显示时弹层的位置，支持top、bottom、left、right
+             * @attribute popPosition
+             * @default 'bottom'
              * @type {String}
              */
             popPosition: 'bottom',
 
             /**
              * 尺寸 s,m,l,xl
+             * @attribute size
+             * @default 'm'
              * @type {String}
              */
-            size: 'l',
+            size: 'm',
 
             /**
              * 风格 有1和2两种
+             * @attribute styleType
+             * @default '2'
              * @type {String}
              */
             styleType: '2',
 
             /**
-             * 偏移位,单位px
+             * 上下左右定位后的偏移位,单位px
+             * @attribute offset
+             * @default  {x:-5,y:5}
              * @type {Object}
              */
             offset: {
@@ -64,8 +72,6 @@ define(function(require, exports, module) {
             css: {
                 position: 'absolute'
             },
-
-            showLabel: true,
 
             events: {
                 render: '_renderCss'

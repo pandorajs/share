@@ -18,6 +18,7 @@ define(function(require, exports, module) {
      * 分享的基础类
      *
      * @class Core
+     * @extends Overlay
      * @uses dictionary
      * @constructor
      */
@@ -27,32 +28,25 @@ define(function(require, exports, module) {
             template: require('./share.handlebars'),
 
             /**
-             * 要渲染的元素
-             * @type {[type]}
+             * 要显示的分享类型，以及排列顺序。
+             * @type {String}
              */
-            element: null,
+            shareList: 'tsohu,qzone,tsina,tqq,kaixin,renren,t163',
 
             /**
-             * 列表模式下的选择器，配置后会渲染到每个选中的元素上
-             * @type {Sting}
-             */
-            selector: '',
-
-            container: null,
-
-            css: {
-                position: 'static'
-            },
-
-            /**
-             * 是否在小窗口中显示分享，否则在新页面中显示
+             * 是否在弹窗中打开分享，否则在新页面中打开
+             * @attribute openWindow
+             * @default false
              * @type {Boolean}
              */
             openWindow: false,
 
             /**
              * 分享的标题,function或String。
-             * @type {String}
+             * @attribute shTitle
+             * @default 当前页面标题
+             * @type {String|Function}
+             * @return {String} 要分享的标题
              */
             shTitle: function() {
                 return this._match().title || document.title;
@@ -60,7 +54,10 @@ define(function(require, exports, module) {
 
             /**
              * 分享的URL，默认为本页URL
-             * @return {String} URL
+             * @attribute shTitle
+             * @default 当前页面标题
+             * @type {String|Function}
+             * @return {String} 要分享的URL
              */
             shUrl: function() {
                 return this._match().url || window.location.href;
@@ -68,53 +65,80 @@ define(function(require, exports, module) {
 
             /**
              * 分享的摘要，默认为当前选中的文本。
-             * @return {String} 接要文本
+             * @attribute shSummary
+             * @default 默认为当前选中的文本
+             * @type {String|Function}
+             * @return {String} 要分享摘要
              */
             shSummary: function() {
                 return (window.getSelection ? window.getSelection() : document.getSelection ? document.getSelection() : document.selection.createRange().text).toString();
             },
 
             /**
-             * 分享理由
+             * 分享理由, 某些分享如QQ空间等，有这一项。
+             * @attribute shDesc
+             * @default 空字符串
+             * @type {String|Function}
              * @return {String} 分享理由
              */
-            shDesc : '',
+            shDesc: '',
 
             /**
              * 需要分享的图片,一般会自动抓取页面上的图片,所以无需配置
+             * @attribute shImg
+             * @default null
+             * @type {Array|Function}
              * @return {Array} 图片列表
              */
             shImg: null,
 
             /**
-             * 分享来源
+             * 分享来源URL
+             * @attribute sourceUrl
+             * @default http://www.17173.com
              * @type {String}
              */
             sourceUrl: 'http://www.17173.com',
 
             /**
              * 来源名称
+             * @attribute source
+             * @default 17173游戏第一门户
              * @type {String}
              */
             source: encodeURIComponent('17173游戏第一门户'),
 
             /**
-             * 注册或重载分享类型
+             * 自定义或重载分享类型
+             * @attribute customShare
+             * @default {}
              * @type {Object}
              */
             customShare: {},
 
             /**
-             * 要显示的分享类型，以及排列顺序。
-             * @type {String}
+             * 列表模式下的选择器，配置后会渲染到每个选中的元素上
+             * @attribute selector
+             * @default 空字符
+             * @type {Sting}
              */
-            shareList: 'tsohu,qzone,tsina,tqq,kaixin,renren,t163',
+            selector: '',
 
             /**
              * 是否使用自定义DOM
+             * @attribute customDom
+             * @default false
              * @type {Boolean}
              */
             customDom: false,
+
+            /**
+             * 是否导入样式
+             * @attribute importStyle
+             * @default true
+             * @type {Boolean}
+             */
+            importStyle: true,
 
             /**
              * 预留获取总分享次数接口
@@ -128,13 +152,16 @@ define(function(require, exports, module) {
              */
             updateHitsCount: null,
 
-            effect: 'none',
-
             /**
-             * 是否导入样式
-             * @type {Boolean}
+             * 要渲染的元素
+             * @type {[type]}
              */
-            importStyle: true
+            element: null,
+            container: null,
+            css: {
+                position: 'static'
+            },
+            effect: 'none'
         },
 
         initialize: function(param, TargetCalss) {
@@ -153,7 +180,7 @@ define(function(require, exports, module) {
 
         setup: function() {
             var self = this;
-            self.dictionary = $.extend(true, self.option('customShare'), dictionary);
+            self.dictionary = $.extend(true, dictionary, self.option('customShare'));
             if (!self.option('customDom')) {
                 self._createData();
                 self.render();
@@ -165,7 +192,7 @@ define(function(require, exports, module) {
         },
 
         /**
-         * 显示组装数据
+         * 组装显示数据
          * @private
          */
         _createData: function() {
@@ -231,7 +258,7 @@ define(function(require, exports, module) {
             var url;
             //string 或 function
             var target = currentShare.target;
-            var shareInfo = self._createShareInfo();
+            var shareInfo = self._createShareInfo(currentShare);
             if (typeof target === 'function') {
                 url = target.call(self, shareInfo, currentShare, currentDom);
                 if (!url) {
@@ -241,7 +268,7 @@ define(function(require, exports, module) {
                 url = target.replace(/\{\{(\w+)\}\}/g, function(substr, str1) {
                     var value = shareInfo[str1] || '';
                     if (value && str1 == 'img') {
-                        value = value.join(currentShare.imgSplit || '||');
+                        return value;
                     }
                     return encodeURIComponent(value);
                 });
@@ -253,14 +280,14 @@ define(function(require, exports, module) {
          * 要分享的数据
          * @private
          */
-        _createShareInfo: function() {
+        _createShareInfo: function(currentShare) {
             var self = this;
             return {
                 title: self._createAttr(self.option('shTitle')),
-                img: self._createAttr(self.option('shImg')),
+                img: self._createImg(self.option('shImg'), currentShare),
                 url: self._createAttr(self.option('shUrl')),
                 summary: self._createAttr(self.option('shSummary')),
-                desc : self._createAttr(self.option('shDesc')),
+                desc: self._createAttr(self.option('shDesc')),
                 appkey: self.option('appkey'),
                 sourceUrl: self.option('sourceUrl'),
                 source: self.option('source')
@@ -302,6 +329,21 @@ define(function(require, exports, module) {
                 return attr.call(self, self.relateDom || self.element);
             } else if (attr) {
                 return attr;
+            } else {
+                return '';
+            }
+        },
+
+        _createImg: function(img, currentShare) {
+            var imgArray;
+            if (typeof img === 'string') {
+                return encodeURIComponent(img);
+            } else if (img) {
+                imgArray = [];
+                for (var i = 0; i < img.length; i++) {
+                    imgArray[i] = encodeURIComponent(img[i]);
+                }
+                return imgArray.join(currentShare.imgSplit || '||');
             } else {
                 return '';
             }

@@ -28,18 +28,24 @@ define(function(require, exports, module) {
 
             /**
              * 风格 有1和2两种
+             * @attribute styleType
+             * @default '2'
              * @type {String}
              */
             styleType: '2',
 
             /**
              * 尺寸 s,m,l,xl(方形没有XL)
+             * @attribute size
+             * @default 'm'
              * @type {String}
              */
             size: 'm',
 
             /**
-             * 形状 rec,cir
+             * 形状 rec为方形，cir为圆形。
+             * @attribute shape
+             * @default 'rec'
              * @type {String}
              */
             shape: 'rec',
