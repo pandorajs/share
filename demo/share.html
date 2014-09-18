@@ -3,85 +3,121 @@
 
 <head>
     <meta charset="utf-8">
-    <title>这是标题</title>
+    <title>分享组件demo</title>
+    <script src="http://ue.17173cdn.com/cache/lib/v2/jquery-1.4.4.js"></script>
     <script src="http://ue.17173cdn.com/a/lib/pandora.js"></script>
 </head>
 
 <body>
 
+    <h1>demo要放在服务器上才能运行</h1>
 
-<div id="box1"></div>
+    <h2>自动生成</h2>
+    <p>自动生成的分享不需要额外的js代码,属性配置以data-widget开头，大写属性名用中划线连接</p>
+    <span data-widget="share" data-widget-share-list="weixin,tsohu,renren,qq">tttttt</span>
 
-<div id="box2"></div>
-
-<div id="box3"></div>
-
-<div >多么痛的领悟多么痛的领悟多么痛的领悟<span id="floatbox1" style="color:red">点这</span>多么痛的领悟多么痛的领悟</div>
-<div >多么痛的领悟多么痛的领悟多么痛的领悟<span id="floatbox2" style="color:red">点这</span>多么痛的领悟多么痛的领悟</div>
+    <span>===============================================</span>
 
 
-<ul id="list">
-  <li><a title="《网易全明星》8.12首测 CG 首批英雄抢先看" href="http://news.17173.com/content/2014-07-30/20140730150001098.shtml">a1</a>  <span>点击1</span></li>
-  <li><a title="老少皆宜现场欢乐！《风暴英雄》CJ现场试玩" href="http://news.17173.com/content/2014-07-31/20140731173419614_1.shtml">a1</a>  <span>点击2</span></li>
-</ul>
+    <h2>普通应用</h2>
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <span>===============================================</span>
+
+    <!-- 点击展开 -->
+    <h2>点击展开</h2>
+    <div>多么痛的领悟多么痛的领悟多么痛的领悟
+        <span id="floatbox1" style="color:red">点这里展开</span>多么痛的领悟多么痛的领悟</div>
+    <div>多么痛的领悟多么痛的领悟多么痛的领悟
+        <span id="floatbox2" style="color:red">点这里展开</span>多么痛的领悟多么痛的领悟</div>
+
+    <span>===============================================</span>
+
+    <!-- 列表模式 -->
+    <h2>列表模式</h2>
+    <ul id="list">
+        <li><a title="《网易全明星》8.12首测 CG 首批英雄抢先看" href="http://news.17173.com/content/2014-07-30/20140730150001098.shtml">a1</a>
+            <span>点击1</span>
+        </li>
+        <li><a title="老少皆宜现场欢乐！《风暴英雄》CJ现场试玩" href="http://news.17173.com/content/2014-07-31/20140731173419614_1.shtml">a1</a>
+            <span>点击2</span>
+        </li>
+    </ul>
+    <span>===============================================</span>
+
+    <!-- 回调方法 -->
+    <h2>回调方法里生成分享</h2>
+    <button type="button" id="callback">点击回调</button>
+    <br/>
+
+    <span>===============================================</span>
 
 
-<p>xxxxxxxxxxxxxxx<span data-widget="share"  data-widget-share-list="weixin,tsohu,renren,qq" >tttttt</span>xxxxxxxxxxxxxxxxxxxx</p>
-
-    <script>
-    pandora.use(['$', 'share', 'pandora/share/1.0.0/floatshare'], function($, Share, FloatShare) {
+    <script type="text/javascript">
+    pandora.use(['share', 'floatshare'], function(Share, FloatShare) {
 
         new Share({
-          element : '#box1',
-          styleType : '2',
-          shape : 'cir'
+            element: '#box1', //要应用的元素
+            styleType: '2', //风格类型
+            shape: 'cir' //形状，只有styleType等2时才有效
         });
 
         new Share({
-          element : '#box2',
-          styleType : '1',
-          shape : 'cir',
-          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+            element: '#box2',
+            styleType: '1',
+            shape: 'cir',
+            size: 'l',
+            shareList: 'weixin,t163,kaixin,qq,qzone,tsina,tqq,tsohu', //自定义要显示的分享
+            shImg: function() { //自定义分享图片
+                return ['http://i3.17173.itc.cn/2014/dn/2014/www/09/090902.jpg', 'http://i3.shouyou.itc.cn/2014/news/2014/09/16/IMG_2871.jpg', 'http://i1.shouyou.itc.cn/2014/news/2014/09/16/IMG_2893.jpg']
+            }
         });
 
         new Share({
-          element : '#box3',
-          styleType : '2',
-          size : 'l',
-          shape : 'rec',
-          shUrl : 'http://news.17173.com/content/2014-07-30/20140730150001098.shtml',
-          shTitle : '网易全明星》8.12首测 CG 首批英雄抢先看',
-          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin',
-          shImg:['http://i3.17173.itc.cn/2014/dn/2014/www/09/090902.jpg','http://i3.shouyou.itc.cn/2014/news/2014/09/16/IMG_2871.jpg','http://i1.shouyou.itc.cn/2014/news/2014/09/16/IMG_2893.jpg']
+            element: '#box3',
+            styleType: '2',
+            size: 'l',
+            shape: 'rec',
+            shUrl: 'http://news.17173.com/content/2014-07-30/20140730150001098.shtml',
+            shTitle: '网易全明星》8.12首测 CG 首批英雄抢先看',
+            shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin',
+            shImg: ['http://i3.17173.itc.cn/2014/dn/2014/www/09/090902.jpg', 'http://i3.shouyou.itc.cn/2014/news/2014/09/16/IMG_2871.jpg', 'http://i1.shouyou.itc.cn/2014/news/2014/09/16/IMG_2893.jpg']
         });
 
 
-         new FloatShare({
-          element : '#floatbox1',
-
-          styleType:'2',
-          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        new FloatShare({
+            element: '#floatbox1',
+            styleType: '2',
+            shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
         });
 
-         new FloatShare({
-          element : '#floatbox2',
-
-          styleType:'1',
-          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
-        });
-
-
-         new FloatShare({
-          element : '#list',
-          selector : 'span',
-          match : 'li a',
-          styleType:'1',
-          shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        new FloatShare({
+            element: '#floatbox2',
+            styleType: '1',
+            shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
         });
 
 
+        new FloatShare({
+            element: '#list',
+            selector: 'span',
+            match: 'li a',
+            styleType: '1',
+            shareList: 'qq,qzone,tsina,tqq,tsohu,renren,weixin,t163,kaixin'
+        });
+    });
+
+
+    //假设在外面的作用域中
+    $('#callback').click(function() {
+        var tem = $('<div>我会在这元素上生成分享</div>').insertAfter($(this));
+        pandora.use(['share'], function(Share) {
+            new Share({
+                element: tem
+            });
+        });
     });
     </script>
 </body>
-
 </html>

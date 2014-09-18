@@ -1,12 +1,12 @@
 <div class="gb-share" data-role="main">
-	<div class="gb-share-title">分享到：</div>
+  {{#if showLabel}}
+	   <div class="gb-share-title">分享到：</div>
+  {{/if}}
   <div class="gb-share-con">
   	{{#each sharelist}}
   		<a class="gb-share-btn gb-share-btn-{{shareType}}" href="javascript:;" data-site="{{shareType}}" title="分享到{{label}}">
   			<i class="gb-share-ico-font">{{iconText}}</i>
-  			{{#if ../showLabel}}
-  				<span class="gb-share-btn-tit">{{label}}</span>
-  			{{/if}}
+  			<span class="gb-share-btn-tit">{{label}}</span>
   		</a>
   	{{/each}}
   </div>

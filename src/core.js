@@ -29,6 +29,8 @@ define(function(require, exports, module) {
 
             /**
              * 要显示的分享类型，以及排列顺序。
+             * @attribute shareList
+             * @default 'tsohu,qzone,tsina,tqq,kaixin,renren,t163'
              * @type {String}
              */
             shareList: 'tsohu,qzone,tsina,tqq,kaixin,renren,t163',
@@ -154,14 +156,23 @@ define(function(require, exports, module) {
 
             /**
              * 要渲染的元素
-             * @type {[type]}
+             * @attribute element
+             * @type {String|Jquery}
              */
             element: null,
             container: null,
             css: {
                 position: 'static'
             },
-            effect: 'none'
+            effect: 'none',
+
+            /**
+             * 是否显示“分享到：”
+             * @attribute showLabel
+             * @default true
+             * @type {Boolean}
+             */
+            showLabel : true
         },
 
         initialize: function(param, TargetCalss) {
@@ -334,8 +345,10 @@ define(function(require, exports, module) {
             }
         },
 
-        _createImg: function(img, currentShare) {
+        _createImg: function(preImg, currentShare) {
+            var self = this;
             var imgArray;
+            var img = self._createAttr(preImg);
             if (typeof img === 'string') {
                 return encodeURIComponent(img);
             } else if (img) {

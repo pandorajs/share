@@ -43,7 +43,7 @@ define(function(require, exports, module) {
             size: 'm',
 
             /**
-             * 形状 rec为方形，cir为圆形。
+             * 形状 rec为方形，cir为圆形,只有styleType为2时才有效。
              * @attribute shape
              * @default 'rec'
              * @type {String}
