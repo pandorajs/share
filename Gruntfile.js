@@ -149,7 +149,7 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: '.build/',
-          src: ['*.js'],
+          src: ['share.js','share-debug.js','floatshare.js','floatshare-debug.js'],
           dest: 'dist/'
         }]
       }
