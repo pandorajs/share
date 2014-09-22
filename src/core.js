@@ -191,7 +191,7 @@ define(function(require, exports, module) {
 
         setup: function() {
             var self = this;
-            self.dictionary = $.extend(true, dictionary, self.option('customShare'));
+            self.dictionary = $.extend(true, {}, dictionary, self.option('customShare'));
             if (!self.option('customDom')) {
                 self._createData();
                 self.render();
