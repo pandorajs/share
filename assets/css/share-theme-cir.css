@@ -1,5 +1,5 @@
 .gb-share-cir .gb-share-title{ padding-top:2px;}
-.gb-share-cir .gb-share-btn,.gb-share-cir .gb-share-btn:visited,.gb-share-cir .gb-share-btn:hover{ color:#fff;}
+.gb-share-cir .gb-share-btn .gb-share-ico-font,.gb-share-cir .gb-share-btn:visited .gb-share-ico-font,.gb-share-cir .gb-share-btn:hover .gb-share-ico-font{ color:#fff;}
 .gb-share-cir .gb-share-btn{ margin:0 3px; padding:2px; background: url(http://ue2.17173cdn.com/a/lib/pandora/share/1.0.0/assets/img/gb-share-ico.png) no-repeat;}
 .gb-share-cir .gb-share-btn-tit{ display: none;}
 

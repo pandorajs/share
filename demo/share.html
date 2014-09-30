@@ -14,8 +14,10 @@
 
     <h2>自动生成</h2>
     <p>自动生成的分享不需要额外的js代码,属性配置以data-widget开头，大写属性名用中划线连接</p>
-    <span data-widget="share" data-widget-share-list="weixin,tsohu,renren,qq">tttttt</span>
+    <span data-widget="share" data-widget-share-list="weixin,tsohu,renren,qq">这里会被替换掉</span>
+    <span data-widget="floatshare" data-widget-share-list="weixin,tsohu,renren,qq">点这里</span>
 
+    <br/>
     <span>===============================================</span>
 
 
@@ -55,12 +57,17 @@
 
 
     <script type="text/javascript">
-    pandora.use(['share', 'floatshare'], function(Share, FloatShare) {
+    pandora.use(['share', 'floatshare', 'overlay', '$'], function(Share, FloatShare, Overlay, $) {
 
         new Share({
             element: '#box1', //要应用的元素
             styleType: '2', //风格类型
-            shape: 'cir' //形状，只有styleType等2时才有效
+            shape: 'cir', //形状，只有styleType等2时才有效
+            customShare : {
+                weixin : {
+                    position : 'top' //显示在上面
+                }
+            }
         });
 
         new Share({
@@ -71,6 +78,11 @@
             shareList: 'weixin,t163,kaixin,qq,qzone,tsina,tqq,tsohu', //自定义要显示的分享
             shImg: function() { //自定义分享图片
                 return ['http://i3.17173.itc.cn/2014/dn/2014/www/09/090902.jpg', 'http://i3.shouyou.itc.cn/2014/news/2014/09/16/IMG_2871.jpg', 'http://i1.shouyou.itc.cn/2014/news/2014/09/16/IMG_2893.jpg']
+            },
+            customShare: { //重载原来的方法,让微信点击时出现在右边
+                weixin: {
+                    position : 'right'
+                }
             }
         });
 
@@ -120,4 +132,5 @@
     });
     </script>
 </body>
+
 </html>

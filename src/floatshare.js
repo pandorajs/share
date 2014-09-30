@@ -38,7 +38,7 @@ define(function(require, exports, module) {
              * @default 'm'
              * @type {String}
              */
-            size: 'm',
+            size: 'l',
 
             /**
              * 风格 有1和2两种
@@ -57,6 +57,12 @@ define(function(require, exports, module) {
             offset: {
                 x: -5,
                 y: 5
+            },
+
+            customShare : {
+                weixin : {
+                    position : 'center'
+                }
             },
 
             /**

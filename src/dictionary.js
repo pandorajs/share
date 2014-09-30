@@ -9,10 +9,9 @@ define(function(require, exports, module) {
     'use strict';
 
     var $ = require('$'),
-        Overlay = require('overlay'),
-        weixinTemplate = require('./weixin.handlebars');
+        Overlay = require('overlay');
 
-    var weixinOverlay;
+    var isIE6 = (!!window.ActiveXObject && !window.XMLHttpRequest);
 
     module.exports = {
 
@@ -53,10 +52,10 @@ define(function(require, exports, module) {
         },
 
         //分享到QQ好友
-        'qq' : {
-          iconText : 'q',
-          label: 'QQ好友',
-          target : 'http://connect.qq.com/widget/shareqq/index.html?url={{url}}&title={{title}}&desc={{desc}}&summary={{summary}}&pics={{img}}&site={{source}}'
+        'qq': {
+            iconText: 'q',
+            label: 'QQ好友',
+            target: 'http://connect.qq.com/widget/shareqq/index.html?url={{url}}&title={{title}}&desc={{desc}}&summary={{summary}}&pics={{img}}&site={{source}}'
         },
 
         //人人网
@@ -70,7 +69,7 @@ define(function(require, exports, module) {
         't163': {
             iconText: 'w',
             label: '网易微博',
-            imgSplit : ',',
+            imgSplit: ',',
             target: 'http://t.163.com/article/user/checkLogin.do?sourceUrl={{sourceUrl}}&source={{source}}&info={{title}}  {{url}}&link={{url}}&images={{img}}&togImg=true'
         },
 
@@ -78,7 +77,7 @@ define(function(require, exports, module) {
         'kaixin': {
             iconText: 'k',
             label: '开心网',
-            imgSplit : ',',
+            imgSplit: ',',
             target: 'http://www.kaixin001.com/rest/records.php?&content={{summary}}&title={{title}}&url={{url}}&pic={{img}}&style=11'
         },
 
@@ -86,32 +85,100 @@ define(function(require, exports, module) {
         'weixin': {
             iconText: 'x',
             label: '微信',
+            position: 'bottom', //center
             target: function(shareInfo, options, currentDom) {
+                var weixinOverlay = options.weixinOverlay;
+                var position = options.position;
+                var offset, selfXY, baseXY;
+                switch (position) {
+                    case 'center':
+                        offset = {
+                            y: 120
+                        };
+                        selfXY = baseXY = {
+                            x: 0.5
+                        };
+                        break;
+                    case 'top':
+                        baseXY = {
+                            x: 0.5,
+                            y: 0
+                        };
+                        selfXY = {
+                            x: 0.5,
+                            y: 1
+                        };
+                        break;
+                    case 'left':
+                        baseXY = {
+                            x: 0,
+                            y: 0.5
+                        };
+                        selfXY = {
+                            x: 1,
+                            y: 0.5
+                        };
+                        break;
+                    case 'right':
+                        baseXY = {
+                            x: 1,
+                            y: 0.5
+                        };
+                        selfXY = {
+                            x: 0,
+                            y: 0.5
+                        };
+                        break;
+                    default: //bottom
+                        baseXY = {
+                            x: 0.5,
+                            y: 1
+                        };
+                        selfXY = {
+                            x: 0.5,
+                            y: 0
+                        };
+                        break;
+                }
+
                 if (!weixinOverlay) {
+                    var outClick = function (event) {
+                        var overlay = event.data;
+                        if ($.contains(overlay.element[0], event.target)) {
+                            return;
+                        }
+                        overlay.hide();
+                    };
                     weixinOverlay = new Overlay({
-                        template: weixinTemplate,
-                        autoShow: false,
+                        template: require('./weixin.handlebars'),
+                        baseElement: position == 'center' ? undefined : currentDom,
+                        autoShow: true,
                         css: {
-                            position: (!!window.ActiveXObject && !window.XMLHttpRequest) ? 'absolute' : 'fixed'
+                            position: isIE6 || position != 'center' ? 'absolute' : 'fixed',
+                            outline: 'none'
                         },
-                        offset: {
-                            y: 70
-                        },
-                        selfXY: {
-                            x: 0.5
-                        },
-                        baseXY: {
-                            x: 0.5
-                        },
+                        offset: offset,
+                        selfXY: selfXY,
+                        baseXY: baseXY,
                         delegates: {
                             'click [data-role=close]': function() {
-                                weixinOverlay.hide();
+                                this.hide();
+                            }
+                        },
+                        events: {
+                            show: function() {
+                                $(document).on('click', this, outClick);
+                            },
+                            hide:function(){
+                                $(document).off('click', outClick);
                             }
                         }
                     });
+                    options.weixinOverlay = weixinOverlay;
                 }
                 weixinOverlay.role('qrcode').attr('src', 'http://s.jiathis.com/qrcode.php?url=' + shareInfo.url);
                 weixinOverlay.show();
+                weixinOverlay.setPosition();
                 return false;
             }
         }

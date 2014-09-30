@@ -1,4 +1,4 @@
-.gb-share-rec .gb-share-btn,.gb-share-rec .gb-share-btn:visited,.gb-share-rec .gb-share-btn:hover{ color:#fff;}
+.gb-share-rec .gb-share-btn .gb-share-ico-font,.gb-share-rec .gb-share-btn:visited .gb-share-ico-font,.gb-share-rec .gb-share-btn:hover .gb-share-ico-font{ color:#fff;}
 .gb-share-rec .gb-share-btn{ margin:0 3px; background: url(http://ue2.17173cdn.com/a/lib/pandora/share/1.0.0/assets/img/gb-share-ico.png) no-repeat;}
 .gb-share-rec .gb-share-btn-tit{ display: none;}
 
